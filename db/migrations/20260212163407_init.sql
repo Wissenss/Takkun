@@ -3,6 +3,7 @@ CREATE TABLE accounts(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   nickname TEXT,
   api_key TEXT,
+  is_enabled INTEGER,
   created_at TEXT,
   updated_at TEXT
 );
@@ -17,4 +18,4 @@ CREATE TABLE training_sessions(
 
 -- migrate:down
 DROP TABLE IF EXISTS training_sessions;
-DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS accounts;

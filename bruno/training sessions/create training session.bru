@@ -1,0 +1,24 @@
+meta {
+  name: create training session
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:5000/training-sessions
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
